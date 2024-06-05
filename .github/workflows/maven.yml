@@ -2,9 +2,11 @@ name: project cicd flow
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
+    paths:
+      - med-el-ferjani/**
+      - .github/workflows/*.yml
 
 jobs:
   build:
