@@ -1,4 +1,4 @@
-name: project cicd flow
+ame: project cicd flow
 
 on:
   push:
@@ -42,8 +42,8 @@ jobs:
           username: root
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /home/tp1/mohamedferjani
+            cd /home/tp1/mohamed
             docker pull mohamed/springboot-image-new:latest
-            docker stop container-abdel || true
-            docker rm container-abdel || true
-            docker run -d --name container-abdel -p 2024:2312 -v /home/tp1/mohamedferjani:/app registry-url.io/mohammedferjani/springboot-image-new
+            docker stop container-mohamed || true
+            docker rm container-mohamed || true
+            docker run -d --name container-mohamed -p 3212:3212 -v /home/tp1/mohamedferjani:/app registry-url.io/mohammedferjani/springboot-image-new:latest
