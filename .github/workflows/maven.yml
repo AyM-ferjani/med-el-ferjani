@@ -46,4 +46,4 @@ jobs:
             docker pull ${{ secrets.DOCKER_USERNAME }}/springboot-image-new
             docker stop container-mohammed || true
             docker rm container-mohammed || true
-            docker run -d --name container-mmohamed -p 2024:2312 -v /home/tp1/mohamed/app ${{ secrets.DOCKER_USERNAME }}/springboot-image-new
+            docker run -d --name container-mmohamed -p 3213:3213 -v /home/tp1/mohamed/app ${{ secrets.DOCKER_USERNAME }}/springboot-image-new:Latest
