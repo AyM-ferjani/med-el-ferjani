@@ -42,7 +42,7 @@ jobs:
           username: root
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /home/tp1/mohamedferjani
+            cd /home/tp1/mohamed
             docker pull registry-url.io/mohamedferjani/springboot-image-new
             docker stop container-abdel || true
             docker rm container-abdel || true
