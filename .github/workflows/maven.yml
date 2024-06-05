@@ -43,7 +43,7 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd /home/tp1/mohamed
-            docker pull mohammedferjani/springboot-image-new:latest
+            docker pull mohammedferjani/springboot-image-new
             docker stop container-mohamed || true
             docker rm container-mohamed || true
-            docker run -d --name container-mohamed -p 3212:3212 -v /home/tp1/mohamedferjani:/app registry-url.io/mohammedferjani/springboot-image-new:latest
+            docker run -d --name container-mohamed -p 3212:3212 -v /home/tp1/mohamedferjani:/app registry-url.io/mohammedferjani/springboot-image-new
