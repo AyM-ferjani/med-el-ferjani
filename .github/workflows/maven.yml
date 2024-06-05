@@ -1,4 +1,4 @@
-ame: project cicd flow
+name: project cicd flow
 
 on:
   push:
