@@ -1,4 +1,5 @@
-FROM openjdk:21-jdk-slim
-EXPOSE 2024
-ADD target/springboot-image-new.jar springboot-image-new.jar
-ENTRYPOINT["java" ,"-jar","/springboot-image-new.jar.jar"]
+FROM openjdk:21-jdk-alpine
+VOLUME /tmp
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
